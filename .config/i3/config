@@ -2,13 +2,13 @@
 set $mod Mod4
 
 #АВТОЗАПУСК
+exec_always --no-startup-id autotiling
 exec --no-startup-id picom --experimental-backends -b
 exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/scripts/launch.sh
 exec --no-startup-id dunst
 exec --no-startup-id feh --bg-scale ~/Загрузки/astize_cc0_split1.png
 exec --no-startup-id lxsession
-exec --no-startup-id autotiling
 exec --no-startup-id betterlockscreen -w
 
 # РАБОТА С ПЛАВАЮЩИМИ ДИАЛОГАМИ
@@ -23,7 +23,6 @@ floating_modifier $mod
 
 # LockScreen
 exec --no-startup-id xss-lock -- betterlockscreen -l
-
 
 # ЗАПУСК ТЕРМИНАЛА
 bindsym $mod+Return exec kitty
@@ -79,12 +78,6 @@ bindsym $mod+Shift+space floating toggle
 
 # ПЕРЕКЛЮЧЕНИЕ ФОКУСА С ПЛАВАЮЩИХ ОКОН НА ТАЙЛИНГ
 bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-#bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # ГАПСЫ
 gaps inner 10
@@ -158,9 +151,8 @@ bindsym $mod+Shift+r restart
 # Выйти из i3
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-
 # ИЗМЕНЕНИЕ РАЗМЕРА ОКНА {
-        # СЛЕДУЮЩИЕ КОМБИНАЦИИ РАБОТАЮТ СРАЗУ ПОСЛЕ ВХОДА В РЕЖИМ ИЗМЕНЕНИЯ РАЗМЕРА
+# СЛЕДУЮЩИЕ КОМБИНАЦИИ РАБОТАЮТ СРАЗУ ПОСЛЕ ВХОДА В РЕЖИМ ИЗМЕНЕНИЯ РАЗМЕРА
 mode "resize" {
         # ВЛЕВО УМЕНЬШИТЬ РАЗМЕР ОКНА
         # ВПРАВО УВЕЛИЧИТЬ РАЗМЕР ОКНА

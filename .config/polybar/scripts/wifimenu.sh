@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # this prints a beautifully formatted list. bash was a mistake
-nmcli -t d wifi rescan
 LIST=$(nmcli --fields "SECURITY,SSID" device wifi list | sed 1d | sed 's/  */ /g' | sed -E "s/WPA*.?\S/ /g" | sed "s/^--/ /g" | sed "s/  //g" | sed "/--/d")
 
 # get current connection status
@@ -24,7 +23,7 @@ elif [ "$CHENTRY" = "Enable WiFi 直" ]; then
 elif [ "$CHENTRY" = "Disable WiFi 睊" ]; then
 	nmcli radio wifi off
 else
-	
+
 	# If the connection is already in use, then this will still be able to get the SSID
 	if [ "$CHSSID" = "*" ]; then
 		CHSSID=$(echo "$CHENTRY" | sed  's/\s\{2,\}/\|/g' | awk -F "|" '{print $3}')
