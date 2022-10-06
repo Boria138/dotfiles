@@ -1,22 +1,22 @@
-require('lualine').setup {
+require("lualine").setup({
   options = {
     icons_enabled = true,
     globalstatus = true,
-    component_separators = { left = '', right = '' },
-    section_separators = { left = '', right = '' },
-    disabled_filetypes = { 'NeogitStatus', 'Packer' },
+    component_separators = { left = "", right = "" },
+    section_separators = { left = "", right = "" },
+    disabled_filetypes = { "NeogitStatus", "Packer" },
   },
   sections = {
-    lualine_a = { 'mode' },
+    lualine_a = { "mode" },
     lualine_b = {
       {
-        'filename',
+        "filename",
         path = 1,
-      }
- },
-  lualine_c = { 'diagnostics' },
+      },
+    },
+    lualine_c = { "diagnostics" },
     lualine_x = {},
-    lualine_y = { 'diff' } ,
-    lualine_z = { 'branch' },
+    lualine_y = { "diff" },
+    lualine_z = { "branch" },
   },
-}
+})

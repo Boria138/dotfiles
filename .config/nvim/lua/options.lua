@@ -37,6 +37,7 @@ o.cursorline = true
 -- List
 o.list = true
 o.listchars = {
+  tab = "│·",
   extends = "#",
   precedes = "⟨",
   trail = "•",
