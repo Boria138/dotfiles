@@ -1,13 +1,13 @@
 **WM:**
 
 ```
-xorg xorg-xinit xorg-server rofi feh betterlockscreen xdg-utuls xdg-user-dirs i3-gaps autotiling
+xorg xorg-xinit xorg-server rofi feh xdg-utuls xdg-user-dirs i3-gaps autotiling xss-lock
 ```
 
 **SYSTEM SOFT:**
 
 ```
-neovim networkmanager pulseaudio pavucontrol lxsession dunst lydm pcmanfm gvfs npm nodejs python-pip pluma xsel pamixer kitty
+neovim networkmanager pulseaudio pavucontrol lxsession dunst git pcmanfm-gtk3 gvfs npm nodejs python-pip pluma xsel pamixer kitty qt5-tools
 ```
 
 **TERMINAL SOFT:**
@@ -32,14 +32,14 @@ lxappearance breeze-gtk papirus-icon-theme
 **Polybar**
 
 ```
-sudo pacman -S polybar ttf-jetbrains-mono gsimplecal
-yay -S nerd-fonts-jetbrains-mono
+polybar ttf-jetbrains-mono gsimplecal
 ```
 
-**Picom**
+**AUR**
 
 ```
-yay -S picom-git
+git clone https://aur.archlinux.org/yay-bin.git
+yay -S picom-git nerd-fonts-jetbrains-mono zoom ly betterlockscreen noisetorch-bin ttf-ms-fonts
 ```
 
 **Config Files**
