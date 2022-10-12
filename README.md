@@ -20,13 +20,14 @@ htop ranger neofetch scrot
 
 ```
 sudo ln -s $HOME/.config/nvim /root/.config/nvim
+LC_ALL=C xdg-user-dirs-update --force
 export PATH="${PATH}:$HOME/.local/bin"
 ```
 
 **THEMES:**
 
 ```
-lxappearance breeze-gtk papirus-icon-theme
+lxappearance breeze breeze-gtk papirus-icon-theme archlinux-wallpaper
 ```
 
 **Polybar**

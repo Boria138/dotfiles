@@ -2,18 +2,29 @@
 set $mod Mod4
 
 #АВТОЗАПУСК
-exec_always --no-startup-id autotiling
-exec --no-startup-id picom --experimental-backends -b
+exec_always --no-startup-id "killall picom; picom -b"
 exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launch.sh
 exec --no-startup-id dunst
-exec --no-startup-id feh --bg-scale ~/Загрузки/astize_cc0_split1.png
+exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/archlinux/landscape.jpg
 exec --no-startup-id lxsession
 exec --no-startup-id betterlockscreen -w
+exec_always --no-startup-id autotiling
 
 # РАБОТА С ПЛАВАЮЩИМИ ДИАЛОГАМИ
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="task_dialog"] floating enable
+for_window [window_role="pop-up"]       floating enable
+for_window [window_role="task_dialog"]  floating enable
+for_window [window_role="bubble"]       floating enable
+for_window [window_role="Preferences"]  floating enable
+for_window [window_type="dialog"]       floating enable
+for_window [window_type="menu"]         floating enable
+for_window [class="text-input"]         floating enable
+for_window [class="peek"]               floating enable
+for_window [title="File Transfer*"]     floating enable
+for_window [class="Lxappearance"]       floating enable
+for_window [class="Pavucontrol"]        floating enable
+for_window [class="qt6ct"]              floating enable
+for_window [class="qt5ct"]              floating enable
 
 # СКРИНШОТ
 bindsym --release Print exec --no-startup-id scrot "/home/$USER/Изображения/screenshot_$(date).png"&& notify-send 'Screenshot captured'
