@@ -1,10 +1,9 @@
 configuration {
-  display-drun: "Приложения";
+  display-drun: "Application";
   display-window: "Windows";
   drun-display-format: "{name}";
-  font: "JetBrainsMono Nerd Font Medium 10";
   modi: "window,run,drun";
-  icon-theme: "Papirus";
+  icon-theme: "Breeze";
   show-icons: true;
 }
 
@@ -38,7 +37,7 @@ configuration {
   spacing: 0;
   background-color: transparent;
 
-  font: "Knack Nerd Font 14";
+  font: "JetBrains Mono Regular Nerd Font Complete 14";
   text-color: @text;
 }
 
