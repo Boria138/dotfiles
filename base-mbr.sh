@@ -12,15 +12,15 @@ echo "ARCH" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 ARCH.localdomain ARCH" >> /etc/hosts
-echo root:password | chpasswd
+echo "Root Password"
+passwd root
 sed -i '33s/.//' /etc/pacman.conf
 sed -i '38s/.//' /etc/pacman.conf
+sed -i '93s/.//' /etc/pacman.conf
 sed -i '94s/.//' /etc/pacman.conf
-sed -i '95s/.//' /etc/pacman.conf
-echo "ILoveCandy" >> /etc/pacman.conf
 
 
-pacman -S grub networkmanager bluez bluez-utils bash-completion openssh reflector os-prober ntfs-3g pulseaudio pulseaudio-alsa pulseaudio-jack xdg-user-dirs xdg-utils
+pacman -S --nedded grub networkmanager bash-completion rsync reflector os-prober ntfs-3g pulseaudio pulseaudio-alsa pulseaudio-jack xdg-user-dirs xdg-utils realtime-privileges xorg xorg-server xorg-xinit dosfstools mtools
 
 grub-install /dev/sda
 sed -i '63s/.//' /etc/default/grub
@@ -28,23 +28,10 @@ sed -i '63s/.//' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
-systemctl enable bluetooth
 
 useradd -mG wheel,realtime,storage -s /bin/bash barry
-echo barry:password | chpasswd
-
-if ! builtin type -p 'yay' >/dev/null 2>&1; then
-  CWD=`pwd`
-  echo 'Install yay.'
-  tmpdir="$(command mktemp -d)"
-  command cd "${tmpdir}" || return 1
-  sudo pacman -Sy --needed --noconfirm base base-devel git
-  git clone https://aur.archlinux.org/yay-bin.git
-  cd yay-bin
-  makepkg -sric
-  cd $CWD
-fi
-
+echo "User Password"
+passwd barry
 LC_ALL=C xdg-user-dirs-update --force
 
 printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m"
