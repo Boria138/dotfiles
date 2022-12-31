@@ -3,9 +3,9 @@
 # Btrfscreate v2.0
 # ----------------------------------------|
 #           :
-# Author    : LinuxShef
+# Author    : LinuxShef,Barry
 #           :
-# Project   : https://github.com/shefpower/btrfscreate.git
+# Project   : https://github.com/shefpower/btrfscreate.git,https://github.com/Boria138/btrfscreate.git
 #           :
 # License   : LGPL-3.0 (http://opensource.org/licenses/lgpl-3.0.html)
 #           :
@@ -254,4 +254,53 @@ read main_menu
 #                                                      #
 #----------------------------------------------------------------------|
 clear
-df -h
+lsblk
+clear
+
+echo '
+
+
+
+
+
+
+
+
+
+                                     Выбор ядра системы
+              .──────────────────────────────────────────────────────────────.
+              .                                                              .
+              .                                                              .
+              .  Выберите один из варинтов ядра ,для установки системы :     .
+              .                                                              .
+              .   -> С обычным ядром Linux - введите 1                       .
+              .                                                              .
+              .   -> C производительным ядром Linux-zen - введите 2          .
+              .                                                              .
+              .   -> С ядром повышеной стабильности Linux-lts - введите 3    .
+              .                                                              .
+              .                                                              .
+              .──────────────────────────────────────────────────────────────.
+'
+echo -e "\t
+                                 -> Linux ( 1 ) "
+echo -e "\t
+                                 -> Linux-zen ( 2 )"
+echo -e "\t
+                                 -> Linux-lts ( 3 )"
+echo -n "
+                                 -> Введите значение : "
+read main_menu
+      case "$main_menu" in
+
+         "1" ) clear ; pacstrap -i /mnt base base-devel linux linux-headers linux-firmware dosfstools btrfs-progs iucode-tool archlinux-keyring bluez bluez-utils micro git --noconfirm
+         ;;
+         "2" ) clear ; pacstrap -i /mnt base base-devel linux-zen linux-zen-headers linux-firmware dosfstools btrfs-progs iucode-tool archlinux-keyring bluez bluez-utils micro git --noconfirm
+         ;;
+         "3" ) clear ; pacstrap -i /mnt base base-devel linux-lts linux-lts-headers linux-firmware dosfstools btrfs-progs iucode-tool archlinux-keyring bluez bluez-utils micro git --noconfirm
+      esac
+
+clear
+genfstab -U /mnt >> /mnt/etc/fstab
+arch-chroot /mnt /bin/bash -c "git clone https://github.com/boria138/dotfiles"
+
