@@ -90,11 +90,6 @@ bindsym $mod+Shift+space floating toggle
 # ПЕРЕКЛЮЧЕНИЕ ФОКУСА С ПЛАВАЮЩИХ ОКОН НА ТАЙЛИНГ
 bindsym $mod+space focus mode_toggle
 
-# ГАПСЫ
-gaps inner 10
-gaps outer -10
-smart_gaps on
-
 #ШРИФТЫ
 font pango:JetBrains Mono 8
 

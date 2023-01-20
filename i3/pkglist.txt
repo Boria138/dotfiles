@@ -5,7 +5,7 @@ rofi
 feh
 xdg-utils
 xdg-user-dirs
-i3-gaps
+i3-wm
 autotiling-git
 xss-lock
 firefox
@@ -38,7 +38,6 @@ breeze-gtk
 papirus-icon-theme
 archlinux-wallpaper
 polybar
-ttf-jetbrains-mono
 gsimplecal
 picom-git
 nerd-fonts-jetbrains-mono
