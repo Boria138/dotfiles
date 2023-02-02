@@ -1,0 +1,23 @@
+{
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "editor.smoothScrolling": true,
+  "editor.fontSize": 16,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "editor.renderControlCharacters": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.folding": false,
+  "editor.glyphMargin": false,
+  "editor.parameterHints.enabled": false,
+  "editor.hover.enabled": false,
+  "editor.lineHeight": 23,
+  "editor.insertSpaces": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.formatOnSave": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "emmet.triggerExpansionOnTab": true,
+  "security.workspace.trust.enabled": false
+}
