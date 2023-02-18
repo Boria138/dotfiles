@@ -36,5 +36,3 @@ gsimplecal
 picom-git
 ttf-jetbrains-mono-nerd
 betterlockscreen
-rng-tools
-dbus-broker
