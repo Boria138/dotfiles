@@ -25,7 +25,7 @@ require("mason-null-ls").setup({
 -- LSP config
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "sumneko_lua", "bashls", "cssls", "emmet_ls", "html" },
+  ensure_installed = { "lua_ls", "bashls", "cssls", "emmet_ls", "html" },
 })
 
 local lsp_defaults = {
@@ -47,7 +47,7 @@ lspconfig.emmet_ls.setup({})
 lspconfig.bashls.setup({})
 lspconfig.html.setup({})
 lspconfig.cssls.setup({})
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
   settings = {
     Lua = {
       diagnostics = {
