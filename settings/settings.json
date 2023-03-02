@@ -7,6 +7,7 @@
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": false,
   "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "boundary",
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "editor.folding": false,
@@ -17,7 +18,9 @@
   "editor.insertSpaces": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.formatOnSave": true,
-  "liveServer.settings.donotShowInfoMsg": true,
+  "explorer.confirmDelete": false,
+  "editor.linkedEditing": true,
   "emmet.triggerExpansionOnTab": true,
-  "security.workspace.trust.enabled": false
+  "security.workspace.trust.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd"
 }
