@@ -6,7 +6,7 @@ exec_always --no-startup-id "killall picom; picom -b"
 exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launch.sh
 exec --no-startup-id dunst
-exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/archlinux/landscape.jpg
+exec_always --no-startup-id nitrogen --restore 
 exec --no-startup-id lxsession
 exec --no-startup-id betterlockscreen -w
 exec_always --no-startup-id autotiling
@@ -25,6 +25,7 @@ for_window [class="Lxappearance"]       floating enable
 for_window [class="Pavucontrol"]        floating enable
 for_window [class="qt6ct"]              floating enable
 for_window [class="qt5ct"]              floating enable
+for_window [class="feh"]              	floating enable
 
 # СКРИНШОТ
 bindsym --release Print exec --no-startup-id scrot "$HOME/Pictures/screenshot_$(date).png"&& notify-send 'Screenshot captured'
@@ -36,7 +37,7 @@ floating_modifier $mod
 exec --no-startup-id xss-lock -- betterlockscreen -l
 
 # ЗАПУСК ТЕРМИНАЛА
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec xfce4-terminal
 
 # ЗАКРЫТЬ ОКНО
 bindsym $mod+Shift+q kill
@@ -90,6 +91,12 @@ bindsym $mod+Shift+space floating toggle
 # ПЕРЕКЛЮЧЕНИЕ ФОКУСА С ПЛАВАЮЩИХ ОКОН НА ТАЙЛИНГ
 bindsym $mod+space focus mode_toggle
 
+# ГАПСЫ
+gaps inner 5
+gaps outer -5
+
+smart_gaps on
+
 #ШРИФТЫ
 font pango:JetBrains Mono 8
 
@@ -97,7 +104,7 @@ font pango:JetBrains Mono 8
 default_border pixel
 
 # РАЗМЕР РАМОК ОКНА
-for_window [tiling] border pixel 2
+for_window [tiling] border pixel 1
 
 # ОТКЛЮЧЕНИЕ РАМОК ДЛЯ ПОЛНОЭКРАННЫХ ПРИЛОЖЕНИЙ
 smart_borders on
