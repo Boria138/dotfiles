@@ -22,7 +22,8 @@ pcmanfm-gtk3
 gvfs
 pluma
 xsel
-pamixer
+alsa-utils
+papirus-icon-theme
 xfce4-terminal
 ranger
 scrot
