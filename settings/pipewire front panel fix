@@ -1,4 +1,4 @@
-~/.config/pipewire/pipewire.conf.d/pipewire.conf
+~/.config/pipewire/pipewire.conf
 
 { factory = adapter
     args = {
