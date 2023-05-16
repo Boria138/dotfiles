@@ -55,9 +55,9 @@ $$ |  $$\$$ |  $$ $$ |  $$ $$ |     $$ $$ |  $$ $$ |  $$ $$ |     $$ $$ |  $$ $$
 
 
 sleep 2
-cp -r -f .config ~/
+cp -rf .config ~/
 betterlockscreen -u /usr/share/backgrounds/archlinux/landscape.jpg
-nvim --headless +PackerSync +qall
+sed -i s/'UseIn=gnome'/'UseIn=gnome;i3'/g /usr/share/xdg-desktop-portal/portals/gtk.portal
 clear
 
 echo ' $$$$$$\ $$\                           $$\                                                    $$\

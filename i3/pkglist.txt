@@ -5,6 +5,9 @@ rofi
 nitrogen
 xdg-utils
 xdg-user-dirs
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+archlinux-wallpaper
 i3-wm
 feh
 autotiling
@@ -33,4 +36,5 @@ polybar
 gsimplecal
 picom
 ttf-jetbrains-mono-nerd
+xfce4-power-manager
 betterlockscreen

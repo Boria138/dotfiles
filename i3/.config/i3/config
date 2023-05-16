@@ -21,11 +21,18 @@ for_window [window_type="menu"]         floating enable
 for_window [class="text-input"]         floating enable
 for_window [class="peek"]               floating enable
 for_window [title="File Transfer*"]     floating enable
-for_window [class="Lxappearance"]       floating enable
+for_window [class="Lxappearance"]       floating enable sticky enable border normal
 for_window [class="Pavucontrol"]        floating enable
-for_window [class="qt6ct"]              floating enable
-for_window [class="qt5ct"]              floating enable
-for_window [class="feh"]              	floating enable
+for_window [class="qt6ct"]              floating enable sticky enable border normal
+for_window [class="qt5ct"]              floating enable sticky enable border normal
+for_window [class="feh"]              	floating enable sticky enable border normal
+for_window [class="kvantummanager"]     floating enable sticky enable
+for_window [title="alsamixer"]          floating enable
+for_window [class="Clipgrab"]           floating enable
+for_window [class="Galculator"]         floating enable border pixel 1
+for_window [class="GParted"]            floating enable border normal
+for_window [class="Simple-scan"]        floating enable
+ 
 
 # СКРИНШОТ
 bindsym --release Print exec --no-startup-id ~/.config/i3/scripts/screenshot.sh
