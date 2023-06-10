@@ -11,11 +11,11 @@ list_row='5'
 win_width='400px'
 
 # Options
-option_1=" Capture Desktop"
-option_2=" Capture Area"
-option_3=" Capture Window"
-option_4=" Capture in 5s"
-option_5=" Capture in 10s"
+option_1=" Capture Desktop"
+option_2="󱣴 Capture Area"
+option_3=" Capture Window"
+option_4="󰔝 Capture in 3s"
+option_5="󰔜 Capture in 10s"
 
 rofi_cmd() {
 		rofi -dmenu -p "Screenshoot"
@@ -65,8 +65,8 @@ shotnow () {
 	notify_view
 }
 
-shot5 () {
-	countdown '5'
+shot3 () {
+	countdown '3'
 	sleep 1 && cd ${dir} && maim -u -f png | copy_shot
 	notify_view
 }
@@ -96,7 +96,7 @@ run_cmd() {
 	elif [[ "$1" == '--opt3' ]]; then
 		shotwin
 	elif [[ "$1" == '--opt4' ]]; then
-		shot5
+		shot3
 	elif [[ "$1" == '--opt5' ]]; then
 		shot10
 	fi

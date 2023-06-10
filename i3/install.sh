@@ -38,8 +38,7 @@ $$$$$$\$$ |  $$ $$$$$$$  | \$$$$  \$$$$$$$ $$ $$ |      \$$$$$$$ \$$$$$$$\$$$$$$
 '
 sleep 2
 clear
-yay --noconfirm --needed
-cat pkglist.txt | yay -Sy --noconfirm --needed -
+yay --noconfirm --needed -Sy xorg xorg-server xorg-xinit rofi nitrogen xgd-utils xdg-user-dirs xdg-desktop-portal-gtk i3-wm viewnior xss-lock ueberzug autotiling pavucontrol dunst lxsession lxappearance thunar  gvfs pluma xfce4-terminal ranger xdotool maim polybar gsimplecal picom xfce4-power-manager betterlockscreen 
 clear
 echo ' $$$$$$\                    $$$$$$\ $$\                           $$\                               $$\          $$\     $$$$$$\ $$\$$\
 $$  __$$\                  $$  __$$\\__|                          \__|                              $$ |         $$ |   $$  __$$\\__$$ |

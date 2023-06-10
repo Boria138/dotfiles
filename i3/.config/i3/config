@@ -49,7 +49,7 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+q kill
 
 # ЗАПУСК ROFI
-bindsym $mod+d exec --no-startup-id env LANG=ru_RU.UTF-8 rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # СМЕНА ФОКУСА НА ДРУГОЕ ОКНО
 bindsym $mod+j focus left

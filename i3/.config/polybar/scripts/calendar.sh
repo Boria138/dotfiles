@@ -2,6 +2,6 @@
 
 DATE=$(date +'%H:%M')
 IMAGE=" "
-COLOR="#F0C674"
+COLOR="#88C0D0"
 
 echo "%{A:gsimplecal &:}%{F$COLOR}$IMAGE%{F-}$DATE%{A}"
