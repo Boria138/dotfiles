@@ -17,9 +17,3 @@ state.unpluuged = yes
 [Jack Front Line Out Phantom]
 state.pluuged = no
 state.unpluuged = yes
-
-/etc/pulse/default.pa
-
-load-module module-alsa-source device=hw:0,0
-# the line above should be somewhere before the line below
-.ifexists module-udev-detect.so
